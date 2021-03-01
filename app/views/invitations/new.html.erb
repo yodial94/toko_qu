@@ -1,0 +1,25 @@
+<% provide(:title, 'New Invitation') %>
+<h1>New Invitation</h1>
+
+	<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_with(model: @invitation, local: true) do |f| %>
+ 			<!--%= render 'shared/error_messages', object: f.object %-->
+
+			<%= f.label :tittle %>
+			<%= f.text_field :tittle, class: 'form-control' %>
+
+			<%= f.label :venue %>
+			<%= f.text_field :venue, class: 'form-control' %>
+
+			<%= f.label :start_at %>
+			<%= f.datetime_field :start_at, class: 'form-control' %>
+
+			<%= f.label :end_at %>
+			<%= f.datetime_field :end_at, class: 'form-control' %>
+
+
+			<%= f.submit "Create invitation", class: "btn- primary" %>
+		<% end %>
+	</div>
+</div>
