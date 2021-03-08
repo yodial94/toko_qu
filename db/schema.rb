@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_01_143841) do
+ActiveRecord::Schema.define(version: 2021_03_01_145714) do
 
   create_table "invitations", force: :cascade do |t|
     t.string "tittle"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2021_03_01_143841) do
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "start_at"
     t.datetime "end_at"
+  end
+
+  create_table "templates", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
